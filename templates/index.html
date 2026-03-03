@@ -27,8 +27,10 @@
                 <img src="/static/icons/logo.png" alt="Toxic Editor">
                 <span>Toxic Editor</span>
             </a>
-            <div class="nav-links">
-                <a href="#tools">All Tools</a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#tools">All Tools</a>
+                </div>
                 <button id="themeToggle" class="theme-toggle">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -206,6 +208,18 @@
                 <a href="https://snapchat.com/add/jhaaryaan" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
             </div>
         </footer>
+
+        <!-- Mobile Bottom Nav -->
+        <div class="mobile-bottom-nav">
+            <a href="/" class="nav-item active">
+                <i class="fas fa-th-large"></i>
+                <span>Tools</span>
+            </a>
+            <a href="#" class="nav-item" onclick="document.querySelector('.footer').scrollIntoView()">
+                <i class="fas fa-user"></i>
+                <span>Me</span>
+            </a>
+        </div>
     </div>
 
     <!-- Tool Modal -->

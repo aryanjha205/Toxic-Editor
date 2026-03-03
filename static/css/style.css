@@ -28,6 +28,7 @@ body.light-mode {
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -104,6 +105,12 @@ body {
 
 .nav-links a:hover {
     color: var(--primary-color);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .pro-badge {
@@ -454,6 +461,10 @@ h1 {
         padding: 0 1rem;
     }
 
+    .nav-right {
+        gap: 1rem;
+    }
+
     h1 {
         font-size: 2.2rem;
     }
@@ -463,26 +474,83 @@ h1 {
     }
 
     .tool-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .tool-card {
+        padding: 1rem;
+        border-radius: 16px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .tool-card h3 {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .tool-card p {
+        display: none;
+        /* Hide descriptions on mobile for cleaner tile view */
+    }
+
+    .tool-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
     }
 
     .hero {
-        margin: 2rem 0 3rem;
+        margin: 1.5rem 0 2rem;
     }
 
-    .modal-content {
-        padding: 1.5rem;
-        width: 95%;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    .upload-area {
-        padding: 1.5rem;
+    .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(13, 13, 13, 0.8);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid var(--glass-border);
+        justify-content: space-around;
+        padding: 0.75rem 0;
+        padding-bottom: env(safe-area-inset-bottom, 1rem);
+        z-index: 99;
     }
 
-    .section-header h2 {
-        font-size: 1.8rem;
+    .mobile-bottom-nav .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--text-muted);
+        text-decoration: none;
+        gap: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
     }
+
+    .mobile-bottom-nav .nav-item.active {
+        color: var(--primary-color);
+    }
+
+    .mobile-bottom-nav .nav-item i {
+        font-size: 1.25rem;
+    }
+
+    main.main-content {
+        padding-bottom: 5rem;
+        /* Space for bottom nav */
+    }
+}
+
+.mobile-bottom-nav {
+    display: none;
 }
 
 /* Custom Webkit Scrollbar */
