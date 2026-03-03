@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic Editor | Complete PDF Powerhouse</title>
+    <meta name="description" content="Professional-grade PDF tools. Merge, Split, Compress, Protect, Rotate and more.">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/icons/logo.png">
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#39ff14">
+    <link rel="apple-touch-icon" href="/static/icons/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/static/icons/logo.png" alt="Toxic Editor">
+                <span>Toxic Editor</span>
+            </a>
+            <div class="nav-links">
+                <a href="#tools">All Tools</a>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <header class="hero">
+            <h1>Expert PDF Solutions. <span class="accent-text">Unleashed.</span></h1>
+            <p class="tagline">The ultimate toolkit to dominate your documents.</p>
+        </header>
+
+        <section id="tools" class="tool-section">
+            <div class="section-header">
+                <h2>PDF Power Tools</h2>
+                <p>Simple, fast, and secure tools to handle every PDF task possible.</p>
+            </div>
+
+            <div class="tool-grid">
+                <!-- Row 1: Basics -->
+                <div class="tool-card" onclick="openTool('merge')">
+                    <div class="tool-icon red"><i class="fas fa-file-export"></i></div>
+                    <h3>Merge PDF</h3>
+                    <p>Combine multiple PDFs into one solid file.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('split')">
+                    <div class="tool-icon blue"><i class="fas fa-file-import"></i></div>
+                    <h3>Split PDF</h3>
+                    <p>Break one PDF into separate pages or ranges.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('compress')">
+                    <div class="tool-icon green"><i class="fas fa-compress-alt"></i></div>
+                    <h3>Compress</h3>
+                    <p>Shrink file size without losing quality.</p>
+                </div>
+
+                <!-- Row 2: Security & Org -->
+                <div class="tool-card" onclick="openTool('protect')">
+                    <div class="tool-icon purple"><i class="fas fa-lock"></i></div>
+                    <h3>Protect</h3>
+                    <p>Encrypt and add password protection.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('unlock')">
+                    <div class="tool-icon yellow"><i class="fas fa-lock-open"></i></div>
+                    <h3>Unlock</h3>
+                    <p>Remove security and passwords from files.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('rotate')">
+                    <div class="tool-icon orange"><i class="fas fa-redo"></i></div>
+                    <h3>Rotate</h3>
+                    <p>Flip pages to the correct orientation.</p>
+                </div>
+
+                <!-- Row 3: Editing -->
+                <div class="tool-card" onclick="openTool('delete')">
+                    <div class="tool-icon red"><i class="fas fa-trash-alt"></i></div>
+                    <h3>Delete Pages</h3>
+                    <p>Remove unwanted pages from your document.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('watermark')">
+                    <div class="tool-icon blue"><i class="fas fa-stamp"></i></div>
+                    <h3>Watermark</h3>
+                    <p>Apply custom text labels across pages.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('reorder')">
+                    <div class="tool-icon green"><i class="fas fa-sort"></i></div>
+                    <h3>Reorder</h3>
+                    <p>Change the sequence of pages as you wish.</p>
+                </div>
+
+                <!-- Row 4: Converters -->
+                <div class="tool-card" onclick="openTool('img2pdf')">
+                    <div class="tool-icon purple"><i class="fas fa-image"></i></div>
+                    <h3>Image to PDF</h3>
+                    <p>Convert JPG/PNG into a clean PDF doc.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('pdf2img')">
+                    <div class="tool-icon yellow"><i class="fas fa-file-image"></i></div>
+                    <h3>PDF to Image</h3>
+                    <p>Export pages into separate image files.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('txt2pdf')">
+                    <div class="tool-icon orange"><i class="fas fa-file-alt"></i></div>
+                    <h3>Text to PDF</h3>
+                    <p>Instant PDF creation from simple text.</p>
+                </div>
+
+                <!-- Row 5: Utility -->
+                <div class="tool-card" onclick="openTool('grayscale')">
+                    <div class="tool-icon red"><i class="fas fa-adjust"></i></div>
+                    <h3>Grayscale</h3>
+                    <p>Convert all pages to black and white.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('extract_text')">
+                    <div class="tool-icon blue"><i class="fas fa-file-medical-alt"></i></div>
+                    <h3>Extract Text</h3>
+                    <p>Get all document text into a TXT file.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('repair')">
+                    <div class="tool-icon green"><i class="fas fa-tools"></i></div>
+                    <h3>Repair PDF</h3>
+                    <p>Fix minor errors and structural issues.</p>
+                </div>
+
+                <!-- Row 6: Advanced -->
+                <div class="tool-card" onclick="openTool('pagenum')">
+                    <div class="tool-icon purple"><i class="fas fa-list-ol"></i></div>
+                    <h3>Page Numbers</h3>
+                    <p>Add numbering to the bottom of every page.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('invert')">
+                    <div class="tool-icon yellow"><i class="fas fa-moon"></i></div>
+                    <h3>Invert (Dark)</h3>
+                    <p>Invert colors for a custom dark mode PDF.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('flatten')">
+                    <div class="tool-icon orange"><i class="fas fa-layer-group"></i></div>
+                    <h3>Flatten PDF</h3>
+                    <p>Merge forms and layers into a single static layer.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('crop')">
+                    <div class="tool-icon red"><i class="fas fa-crop-alt"></i></div>
+                    <h3>Crop PDF</h3>
+                    <p>Trim the margins or crop white space from pages.</p>
+                </div>
+
+                <!-- Row 7: Ultimate Utilities -->
+                <div class="tool-card" onclick="openTool('pdf2word')">
+                    <div class="tool-icon blue"><i class="fas fa-file-word"></i></div>
+                    <h3>PDF to Word</h3>
+                    <p>Extract text and layout into a Microsoft Word file.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('resize')">
+                    <div class="tool-icon green"><i class="fas fa-expand"></i></div>
+                    <h3>Resize PDF</h3>
+                    <p>Change page size to A4, Letter, or custom scale.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('header')">
+                    <div class="tool-icon red"><i class="fas fa-heading"></i></div>
+                    <h3>Add Header</h3>
+                    <p>Add custom text labels to the top of all pages.</p>
+                </div>
+
+                <!-- Row 8: Magic Hand -->
+                <div class="tool-card" onclick="openTool('extract_img')">
+                    <div class="tool-icon purple"><i class="fas fa-images"></i></div>
+                    <h3>Extract Images</h3>
+                    <p>Extract all embedded images without altering the text.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('remove_blank')">
+                    <div class="tool-icon yellow"><i class="fas fa-eraser"></i></div>
+                    <h3>Remove Blank Pages</h3>
+                    <p>Auto-detect and strip blank pages from your PDF.</p>
+                </div>
+
+                <!-- Row 9: Privacy & Clean Up -->
+                <div class="tool-card" onclick="openTool('redact')">
+                    <div class="tool-icon red"><i class="fas fa-user-secret"></i></div>
+                    <h3>Redact Text</h3>
+                    <p>Permanently black out specific words for privacy.</p>
+                </div>
+                <div class="tool-card" onclick="openTool('remove_annots')">
+                    <div class="tool-icon green"><i class="fas fa-comment-slash"></i></div>
+                    <h3>Strip Annotations</h3>
+                    <p>Remove all comments, highlights, and notes.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Toxic Editor. Designed & Developed by Aryan Jha.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/jhaaryaan" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://snapchat.com/add/jhaaryaan" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Tool Modal -->
+    <div id="toolModal" class="modal">
+        <div class="modal-content main-card">
+            <span class="close-btn">&times;</span>
+            <div id="toolContent">
+                <h2 id="modalTitle">Tool Title</h2>
+                <p id="modalDesc">Tool description goes here.</p>
+
+                <div id="optionsArea" class="options-container" style="display: none;">
+                    <!-- Contextual options will be injected here -->
+                </div>
+
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <p>Drag & drop files here or click to upload</p>
+                    <input type="file" id="fileInput" multiple hidden>
+                </div>
+
+                <div class="file-list-header"
+                    style="display: none; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;"
+                    id="fileListHeader">
+                    <span style="color: var(--text-muted); font-size: 0.85rem;">Selected Files:</span>
+                    <button onclick="clearFiles()"
+                        style="background: none; border: none; color: #ff3c3c; cursor: pointer; font-size: 0.85rem; font-weight: 600;">Clear
+                        All</button>
+                </div>
+                <div id="fileList" class="file-list"></div>
+
+                <button id="processBtn" class="action-btn" style="display: none;">
+                    <span>⚡ PROCESS NOW</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
